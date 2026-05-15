@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة المكتب الاستراتيجي - الباحة</title>
+    <link href="https://fonts.cdnfonts.com/css/dubai" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0b9a91;
+            --secondary: #534741;
+            --bg: #cbd5e1;
+            --white: #ffffff;
+            --accent: #0f766e;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Dubai', sans-serif; }
+
+        body {
+            background-color: var(--bg);
+            background-image: radial-gradient(circle at center, #d1d5db 1px, transparent 1px);
+            background-size: 40px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .header-section {
+            margin-bottom: 3.5rem;
+        }
+
+        .main-logo {
+            width: 130px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+        }
+
+        h1 {
+            color: var(--secondary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-top: 2px solid var(--primary);
+            display: inline-block;
+            padding-top: 5px;
+            margin-top: 5px;
+        }
+
+        /* شبكة الأيقونات */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 1rem;
+        }
+
+        .portal-card {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 28px;
+            text-decoration: none;
+            box-shadow: 0 15px 35px -10px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(255,255,255,0.3);
+            position: relative;
+        }
+
+        .portal-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 45px -12px rgba(11, 154, 145, 0.25);
+            background: #fdfdfd;
+        }
+
+        .icon-box {
+            width: 90px;
+            height: 90px;
+            background: #f0fdfa;
+            border-radius: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.8rem;
+            font-size: 3rem;
+            transition: 0.4s;
+            box-shadow: inset 0 0 0 1px rgba(11, 154, 145, 0.1);
+        }
+
+        .portal-card:hover .icon-box {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.1) rotate(-3deg);
+        }
+
+        .card-title {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .card-desc {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .footer-tag {
+            margin-top: 5rem;
+            font-size: 0.95rem;
+            color: var(--secondary);
+            opacity: 0.8;
+            font-weight: 700;
+        }
+
+        /* تحسينات الهاتف */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; padding: 0 10px; }
+            .subtitle { font-size: 1.1rem; }
+            .portal-card { padding: 2.5rem 1.5rem; }
+            .cards-grid { gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <header class="header-section">
+            <img src="bso.png" alt="شعار المكتب" class="main-logo">
+            <h1>المكتب الاستراتيجي لتطوير منطقة الباحة</h1>
+            <p class="subtitle">أنظمة السكرتارية الخاصة</p>
+        </header>
+
+        <div class="cards-grid">
+            <a href="https://fahadsalharbi.github.io/Briefing-Note/" target="_self" class="portal-card">
+                <div class="icon-box">📜</div>
+                <div class="card-title">قصاصات المكتب</div>
+                <p class="card-desc">إعداد المذكرات الرسمية، التوجيهات العاجلة، وقصاصات العرض بتنسيق فني معتمد.</p>
+            </a>
+
+            <a href="https://fahadsalharbi.github.io/agenda/" target="_self" class="portal-card">
+                <div class="icon-box">📅</div>
+                <div class="card-title">جدول الأعمال</div>
+                <p class="card-desc">تنظيم المواعيد اليومية لسعادة الوكيل، وإدارة مسار الاجتماعات مع أرشفة السجلات.</p>
+            </a>
+        </div>
+
+        <footer class="footer-tag">
+            منصة الإدارة التنفيذية | المكتب الخاص
+        </footer>
+    </div>
+
+</body>
+</html>
