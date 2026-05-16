@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بوابة المكتب الاستراتيجي </title>
+    <title>بوابة المكتب الاستراتيجي</title>
     <link href="https://fonts.cdnfonts.com/css/dubai" rel="stylesheet">
     
     <style>
@@ -19,23 +19,23 @@
 
         body {
             background-color: #f8fafc; 
-            
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 30px 20px;
         }
         
         .main-container {
             width: 100%;
-            max-width: 950px;
+            max-width: 1200px; /* تم توسيع الحاوية لتستوعب 3 بطاقات بشكل متناسق */
             text-align: center;
             background: #ffffff; 
             padding: 3.5rem 2rem;
             border-radius: 30px;
             border: 1px solid #e2e8f0;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
         }
 
         .header-section {
@@ -67,17 +67,17 @@
             margin-top: 5px;
         }
 
-        /* شبكة الأيقونات */
+        /* شبكة الأيقونات والأنظمة */
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
             margin-top: 1rem;
         }
 
         .portal-card {
             background: var(--white);
-            padding: 3rem 2rem;
+            padding: 3rem 1.5rem;
             border-radius: 28px;
             text-decoration: none;
             box-shadow: 0 15px 35px -10px rgba(0,0,0,0.1);
@@ -85,7 +85,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(226, 232, 240, 0.8);
             position: relative;
         }
 
@@ -93,6 +93,7 @@
             transform: translateY(-12px);
             box-shadow: 0 25px 45px -12px rgba(11, 154, 145, 0.25);
             background: #fdfdfd;
+            border-color: var(--primary);
         }
 
         .icon-box {
@@ -115,33 +116,61 @@
             transform: scale(1.1) rotate(-3deg);
         }
 
+        .portal-card:hover .icon-box svg {
+            stroke: white; /* تغيير لون أيقونة السهم عند المرور */
+        }
+
         .card-title {
             color: var(--secondary);
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 1rem;
         }
 
         .card-desc {
             color: #64748b;
-            font-size: 1rem;
+            font-size: 0.95rem;
             line-height: 1.7;
         }
 
-        .footer-tag {
-            margin-top: 5rem;
-            font-size: 0.95rem;
-            color: var(--secondary);
-            opacity: 0.8;
-            font-weight: 700;
+        /* حاوية الدمج المباشر للتقويم المطور في الأسفل */
+        .calendar-integration-section {
+            width: 100%;
+            max-width: 1200px;
+            background: var(--white);
+            border-radius: 30px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            overflow: hidden;
         }
 
-        /* تحسينات الهاتف */
+        .calendar-section-title {
+            text-align: right;
+            color: var(--secondary);
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            padding-right: 10px;
+            border-right: 4px solid var(--primary);
+            line-height: 1;
+        }
+
+        .integrated-calendar-frame {
+            width: 100%;
+            height: 880px; /* ارتفاع استراتيجي مدروس لمنع ظهور أشرطة التمرير الداخلية */
+            border: none;
+            border-radius: 16px;
+            display: block;
+        }
+
+        /* تحسينات الاستجابة للهواتف الذكية */
         @media (max-width: 600px) {
             h1 { font-size: 1.6rem; padding: 0 10px; }
             .subtitle { font-size: 1.1rem; }
             .portal-card { padding: 2.5rem 1.5rem; }
             .cards-grid { gap: 1.5rem; }
+            .integrated-calendar-frame { height: 600px; } /* تقليص الارتفاع على الهواتف */
         }
     </style>
 </head>
@@ -163,7 +192,7 @@
                     </svg>
                 </div>
                 <div class="card-title">قصاصات المكتب</div>
-                <p class="card-desc">إعداد التذكيرات ، التوجيهات العاجلة، وقصاصات العرض   </p>
+                <p class="card-desc">إعداد التذكيرات، التوجيهات العاجلة، وقصاصات العرض اليومية</p>
             </a>
 
             <a href="https://fahadsalharbi.github.io/agenda/" target="_self" class="portal-card">
@@ -176,9 +205,33 @@
                     </svg>
                 </div>
                 <div class="card-title">جدول الأعمال</div>
-                <p class="card-desc">تنظيم المواعيد اليومية لسعادة الرئيس التنفيذي</p>
+                <p class="card-desc">تنظيم وتوثيق المواعيد اليومية لسعادة الرئيس التنفيذي</p>
+            </a>
+
+            <a href="https://fahadsalharbi.github.io/Calendar/" target="_self" class="portal-card">
+                <div class="icon-box">
+                    <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#0b9a91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15.5a5 5 0 1 1-7 0a5 5 0 0 1 7 0z"></path>
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                </div>
+                <div class="card-title">التقويم الشامل</div>
+                <p class="card-desc">عرض وتعديل التقويم الشهري وجدولته بصيغة طباعية فخمة</p>
             </a>
         </div>
+    </div>
+
+    <div class="calendar-integration-section">
+        <div class="calendar-section-title">العرض السريع لتقويم الأجندة والمواعيد</div>
+        <iframe 
+            src="https://fahadsalharbi.github.io/Calendar/" 
+            title="تقويم المواعيد الرسمي - المكتب الاستراتيجي"
+            class="integrated-calendar-frame"
+            allow="print">
+        </iframe>
     </div>
 
 </body>
