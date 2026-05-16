@@ -24,18 +24,18 @@
             align-items: center;
             min-height: 100vh;
             padding: 30px 20px;
+            justify-content: center; /* لتوسط المحتوى عمودياً ليعطي مظهراً أكثر اتزاناً */
         }
         
         .main-container {
             width: 100%;
-            max-width: 1200px; /* تم توسيع الحاوية لتستوعب 3 بطاقات بشكل متناسق */
+            max-width: 1200px;
             text-align: center;
             background: #ffffff; 
             padding: 3.5rem 2rem;
             border-radius: 30px;
             border: 1px solid #e2e8f0;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
         }
 
         .header-section {
@@ -117,7 +117,7 @@
         }
 
         .portal-card:hover .icon-box svg {
-            stroke: white; /* تغيير لون أيقونة السهم عند المرور */
+            stroke: white;
         }
 
         .card-title {
@@ -133,44 +133,13 @@
             line-height: 1.7;
         }
 
-        /* حاوية الدمج المباشر للتقويم المطور في الأسفل */
-        .calendar-integration-section {
-            width: 100%;
-            max-width: 1200px;
-            background: var(--white);
-            border-radius: 30px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-            padding: 25px;
-            overflow: hidden;
-        }
-
-        .calendar-section-title {
-            text-align: right;
-            color: var(--secondary);
-            font-size: 1.3rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            padding-right: 10px;
-            border-right: 4px solid var(--primary);
-            line-height: 1;
-        }
-
-        .integrated-calendar-frame {
-            width: 100%;
-            height: 880px; /* ارتفاع استراتيجي مدروس لمنع ظهور أشرطة التمرير الداخلية */
-            border: none;
-            border-radius: 16px;
-            display: block;
-        }
-
         /* تحسينات الاستجابة للهواتف الذكية */
         @media (max-width: 600px) {
+            body { padding: 15px 10px; }
             h1 { font-size: 1.6rem; padding: 0 10px; }
             .subtitle { font-size: 1.1rem; }
             .portal-card { padding: 2.5rem 1.5rem; }
             .cards-grid { gap: 1.5rem; }
-            .integrated-calendar-frame { height: 600px; } /* تقليص الارتفاع على الهواتف */
         }
     </style>
 </head>
@@ -222,16 +191,6 @@
                 <p class="card-desc">عرض وتعديل التقويم الشهري وجدولته بصيغة طباعية فخمة</p>
             </a>
         </div>
-    </div>
-
-    <div class="calendar-integration-section">
-        <div class="calendar-section-title">العرض السريع لتقويم الأجندة والمواعيد</div>
-        <iframe 
-            src="https://fahadsalharbi.github.io/Calendar/" 
-            title="تقويم المواعيد الرسمي - المكتب الاستراتيجي"
-            class="integrated-calendar-frame"
-            allow="print">
-        </iframe>
     </div>
 
 </body>
